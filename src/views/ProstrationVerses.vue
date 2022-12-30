@@ -15,6 +15,7 @@
 </template>
 
 <script>
+const axios = require('axios');
 export default {
   data() {
     return {
@@ -22,12 +23,14 @@ export default {
     }
   },
   mounted() {
-    fetch('http://api.alquran.cloud/v1/sajda/quran-uthmani')
-      .then(response => response.json())
-      .then(data => { 
-        console.log(data);
-        this.verses = data.data.ayahs
+    axios.get('http://api.alquran.cloud/v1/sajda/quran-uthmani')
+    .then(data => { 
+      console.log(data);
+      this.verses = data.data.data.ayahs
     })    
+    .catch((e) => {
+      console.log(e);
+    })
   },
 }
 </script>

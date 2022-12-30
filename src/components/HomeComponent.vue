@@ -53,6 +53,7 @@
 </template>
 
 <script>
+const axios = require('axios');
 export default {
   name: 'HomeComponent',
   data() {
@@ -83,11 +84,13 @@ export default {
         this.updatedChapters = JSON.parse(localStorage.getItem('todos'));
     } 
     else {
-        fetch('http://api.alquran.cloud/v1/surah')
-        .then(response => response.json())
+        axios.get('http://api.alquran.cloud/v1/surah')
         .then(data => { 
-            this.chapters = data.data;
+            this.chapters = data.data.data;
             this.updatedChapters = this.chapters.map((chapter) => ({ ...chapter, learnt: false, forgotten: false, learning: false}))
+        })
+        .catch(e => {
+            console.log(e);
         })
     }
   },
