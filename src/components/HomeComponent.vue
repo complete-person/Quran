@@ -79,7 +79,7 @@ export default {
         document.getElementById('randomModal').innerText = `${randomChapter.number}. ${randomChapter.englishName}`;
     }
   },
-  mounted() {
+  created() {
     if (localStorage.getItem('todos')) {
         this.updatedChapters = JSON.parse(localStorage.getItem('todos'));
     } 

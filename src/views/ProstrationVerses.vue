@@ -22,7 +22,7 @@ export default {
       verses: []
     }
   },
-  mounted() {
+  created() {
     axios.get('http://api.alquran.cloud/v1/sajda/quran-uthmani')
     .then(data => { 
       console.log(data);
