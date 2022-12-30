@@ -10,6 +10,11 @@ const routes = [
     path: '/prostration_verses',
     name: 'prostrationVerses',
     component: () => import('../views/ProstrationVerses.vue')
+  },
+  {
+    path: '/rabbana_duas',
+    name: 'RabbanaDuas',
+    component: () => import('../views/RabbanDuas.vue')
   }
 ]
 

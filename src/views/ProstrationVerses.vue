@@ -69,4 +69,12 @@ export default {
     border-radius: 4px;
     margin-bottom: 15px;
   }
+  @media all and (max-width: 800px) {
+    .main {
+      padding: 0 50px;
+    }
+    .arb {
+      font-size: 20px;
+    }
+  }
 </style>

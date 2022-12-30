@@ -3,7 +3,7 @@
     <div class="nav"> 
       <router-link class="nav__item" to="/">Home</router-link>
       <router-link class="nav__item" to="/prostration_verses">Prostration verses</router-link>
-      <router-link class="nav__item" to="/prostration_verses">Other page</router-link>
+      <router-link class="nav__item" to="/rabbana_duas">Rabbana duas</router-link>
       <router-link class="nav__item" to="/prostration_verses">Other page</router-link>
     </div>
     <router-view/>
@@ -59,5 +59,10 @@
     color: #2e2825;
     font-weight: 500;
     width: auto;
+  }
+  @media all and (max-width: 450px) {
+      .nav {
+        display: none;
+      }
   }
 </style>

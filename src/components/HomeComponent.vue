@@ -5,7 +5,6 @@
         <div class="header">
             <h1 class="title">
                 The Noble Qur'an
-                <p>By Complete Person</p>
             </h1>
             <div class="header_buttons">
                 <div @click="randomize()" class="header_btn">Randomizer</div>
@@ -137,9 +136,6 @@ export default {
 .title {
     color: #2e2825;
 }
-.title p {
-    display: none;
-}
 .header_buttons {
     display: flex;
     gap: 5px;
@@ -270,6 +266,11 @@ export default {
     .main {
         grid-template-columns: repeat(1, 1fr);
     }
+    .chapter_color__round {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
 }
 @media all and (max-width: 320px) {
     .random_modal {
@@ -280,11 +281,6 @@ export default {
     .title {
         font-size: 28px;
         text-align: center;
-    }
-    .title p {
-        display: block;
-        font-size: 14px;
-        font-weight: 400;
     }
     .header_buttons {
         justify-content: center;
